@@ -1,0 +1,187 @@
+:root {
+  --primary-color: #d2982c;
+  --secondary-color: #2a3835;
+}
+* {
+  /* Below is the standard CSS code one should add to get rid of default margins and padding which most of tge HTML elements have */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Times New Roman', sans-serif;
+  font-size: larger;
+  font-style: oblique;
+  user-select: none;
+}
+body {
+  position: relative;
+  min-height: 150vh;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Title CSS */
+.title {
+  background-color: hsl(340, 70%, 87%);
+  text-align: center;
+  font-size: 1.5em;
+  
+  padding-block: 0.5em;
+  color: #550101;
+  cursor: pointer;
+}
+
+/* Navbar CSS */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.9em;
+  font-size: 17px;
+  min-height: 70px;
+  padding-block: 0.6em;
+  background-color: var(--secondary-color);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.navbar a {
+  all: unset;
+  cursor: pointer;
+  color: #e21010e1;
+  font-size:larger;
+  font-weight: bold;
+  font-weight: 400;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+  background-color: hsl(340, 70%, 87%);
+}
+.navbar a:hover {
+  background-color: transparent;
+  color: #550101;
+}
+.navbar #menu {
+  width: fit-content;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 8px;
+  background-color: #f1bac8;
+  color: rgba(238, 31, 31, 0.967);
+}
+.navbar > .icon {
+  display: none;
+}
+#menu,
+#random,
+#start {
+  cursor: pointer;
+}
+
+/* Center css */
+.center {
+
+  box-shadow: rgba(228, 47, 47, 0.16) 0px 1px 4px; /* Added shadow to make page border free */
+  height: 420px;
+  width: 410px;
+  border-color: #0a0305;
+  max-height: 731px;
+  margin: 1rem auto;
+  margin-top: 0cap;
+  margin-top: -1.9%;
+}
+.array {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100%;
+  height: 100%;
+  padding: 1rem;
+  flex-direction: row;
+}
+.cell {
+  display: flex;
+  align-items: flex-start;
+  flex: 0.5;
+  width: 0.000001%;
+  margin: 1px;
+  background-color: #e12f61;
+  resize: horizontal;
+  position: relative;
+  transition: all 0.4s ease-in;
+}
+.cell.done {
+  background-color: #aa60cf;
+  border-color: #6ac81d;
+  color: rgb(235, 4, 4);
+  transition: all 0.4s ease-out;
+}
+.cell.visited {
+  border-color: #6184d8;
+  background-color: #6184d8;
+  color: rgb(208, 9, 9);
+  transition: 0.5s;
+}
+.cell.current {
+  border-color: #50c5b7;
+  background-color: #db1c5c;
+  color: rgb(246, 195, 195);
+  transition: all 0.4s ease-out;
+}
+.cell.min {
+  background-color: #af1366;
+  border-color: #d11077;
+  color: rgb(98, 52, 52);
+  transition: all 0.4s ease-out;
+}
+
+/* Footer CSS */
+.fa.fa-heart {
+  color: #eb2c13;
+}
+footer {
+  margin: 0% auto;
+  text-align: center;
+  font-size: 18px;
+  color: #2c3e50;
+  padding: 1.6em;
+}
+.footer > p:nth-child(1) {
+  margin-top: 0rem;
+  margin-top:0rem;
+  margin-bottom: 0rem;
+}
+.link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #114bc0;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    gap: 0.4em;
+  }
+  .title {
+    font-size: 17px;
+  }
+  .navbar *,
+  .navbar a {
+    font-size: 14px;
+  }
+  .footer {
+    font-size: 18px;
+  }
+  a#random {
+    order: 4;
+  }
+  a.start {
+    order: 5;
+  }
+}
+@media screen and (max-width: 550px) {
+  .center {
+    width: 95%;
+  }
+}
